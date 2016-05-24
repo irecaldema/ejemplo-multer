@@ -1,0 +1,28 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prueba Media</title>
+	<% include ../partials/head %>
+</head>
+<body>
+	<div class="container">
+		<a href="/">subir pdfs</a>
+		<h1>PRUEBA 1</h1>
+		<%if (typeof lista != 'undefined') { %>
+			<% for(var i=0; i<lista.length; i++) {  %>		
+				<embed src="<%= lista[i] %>" width="500" height="375">
+			<% } %>
+		<% } %>		
+	</div>
+	
+	<div class="container">
+		<h1>PRUEBA 2</h1>
+		<%if (typeof lista != 'undefined') { %>
+			<% for(var i=0; i<lista.length; i++) {  %>		
+				<embed src="<%= lista[i] %>#toolbar=0" width="500" height="375">
+			<% } %>
+		<% } %>		
+	</div>
+<% include ../partials/libreriasJs %>
+</body>
+</html>

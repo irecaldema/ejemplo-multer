@@ -1,0 +1,38 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prueba Media</title>
+	<% include ../partials/head %>
+</head>
+<body>
+	<div class="container">
+		<form action='/guardarImagen' method='post' enctype='multipart/form-data'>
+			<label for="imagen">Imagen: </label>
+			<input class="form-control" type="file" id="imagen" name="imagen"/>
+			<br>
+			<button id="enviar" class="btn btn-primary">Enviar</button>
+		</form>					
+	</div>
+
+	<div class="container">
+		<form action='/guardarPdf' method='post' enctype='multipart/form-data'>
+			<label for="pdf">PDF: </label>
+			<input class="form-control" type="file" id="pdf" name="pdf"/>
+			<br/>
+			<button id="enviar" class="btn btn-primary">Enviar</button>
+		</form>	
+		<a href="/muestra_pdfs">galeria de pdfs</a>
+		<br/>
+	</div>
+	
+	<div class="container">
+		<form action='/guardarZip' method='post' enctype='multipart/form-data'>
+			<label for="zip">ZIP: </label>
+			<input class="form-control" type="file" id="zip" name="zip"/>
+			<br>
+			<button id="enviar" class="btn btn-primary">Enviar</button>
+		</form>					
+	</div>	
+<% include ../partials/libreriasJs %>
+</body>
+</html>
